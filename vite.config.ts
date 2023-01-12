@@ -1,7 +1,8 @@
-import solid from "solid-start/vite";
-import { defineConfig } from "vite";
+import { sveltekit } from '@sveltejs/kit/vite';
+import type { UserConfig } from 'vite';
 
-export default defineConfig({
-  plugins: [solid()],
-  ssr: { external: ["@prisma/client"] },
-});
+const config: UserConfig = {
+	plugins: [sveltekit()]
+};
+
+export default config;
