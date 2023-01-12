@@ -1,2 +1,24 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import Tile from '../lib/Tile.svelte';
+	import TileGrid from '../lib/TileGrid.svelte';
+	import LivingRoom from '../lib/LivingRoom.svelte';
+</script>
+
+<LivingRoom />
+<main class="main">
+	<TileGrid>
+		<Tile width="1" height="1" />
+		<Tile width="2" height="1" />
+		<Tile width="2" height="1" />
+		<Tile width="2" height="1" />
+		<Tile width="1" height="2" />
+	</TileGrid>
+</main>
+
+<style>
+	.main {
+		padding: 1rem;
+		display: flex;
+		justify-content: center;
+	}
+</style>
